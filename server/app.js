@@ -2,6 +2,8 @@ const express =require('express');
 const mongoose =require('mongoose');
 const app=express();
 require('./db/conn');
+const cors=require("cors");
+app.use(cors());
 
 app.use(express.json());
 app.use(require('./router/auth'));
