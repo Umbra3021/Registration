@@ -27,11 +27,11 @@ const Register = () =>{
         e.preventDefault();
 
         const {name,email,password,password2} =user;
-        const res = await fetch("/register",{
+        const res = await fetch("https://registrationdemo.onrender.com/register",{
             method:"POST",
             headers:{
                 "Access-Control-Allow-Origin" : "*", 
-"Access-Control-Allow-Credentials" : true ,
+                "Access-Control-Allow-Credentials" : true ,
                 "Content-Type":"application/json"
             },
             body:JSON.stringify({
