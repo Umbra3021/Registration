@@ -29,9 +29,6 @@ router.post('/register', async (req,res) =>{
     }
     try{
 
-        if(password != password2){
-            return res.status(422).json({error:"Password Incorrect"});
-        }
         const user = new User({name,email,password,password2});
         await user.save();
 
@@ -40,7 +37,7 @@ router.post('/register', async (req,res) =>{
     catch(err){
         console.log(err);
     }
-})
+});
 
 
 router.post('/login' , async(req,res) => {

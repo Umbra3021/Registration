@@ -42,15 +42,13 @@ const Register = () =>{
 
         const data= await res.json();
 
-        if(data.status ===422 || !data){
+        if(data.status ===422 ){
             window.alert("Invalid");
             console.log("Invalid");
         }
         else{
             window.alert("Completely Successfully");
             console.log("Done");
-
-         
 
         }
     }
