@@ -32,6 +32,7 @@ const Register = () =>{
             headers:{
                 "Access-Control-Allow-Origin" : "*", 
                 "Access-Control-Allow-Credentials" : true ,
+                "mode":"no-cors",
                 "Content-Type":"application/json"
             },
             body:JSON.stringify({
