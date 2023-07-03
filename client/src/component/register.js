@@ -27,7 +27,7 @@ const Register = () =>{
         e.preventDefault();
 
         const {name,email,password,password2} =user;
-        const res = await fetch("https://registration-p9d4.vercel.app/register",{
+        const res = await fetch("https://backend-rlalqnin0-umbra3021.vercel.app/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
