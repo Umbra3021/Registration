@@ -34,7 +34,7 @@ const Register = () =>{
 "Access-Control-Allow-Credentials" : true ,
                 "Content-Type":"application/json"
             },
-            body:JSON.parse({
+            body:JSON.stringify({
                 name:name,
                 email:email,
                 password:password,
