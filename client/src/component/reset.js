@@ -3,10 +3,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 const Reset = () =>{
 
         const nav = useNavigate();
-    const[email,setemail]=useState("");
+    const[email,setemail]=useState(""); 
 
     const log = async (e) => {
         e.preventDefault();
+        if(!email){
+            window.alert("Fill details");
+        }
         const res = await fetch("https://backend-nine-silk.vercel.app/reset",{
             method:"POST",
             headers:{
@@ -19,8 +22,7 @@ const Reset = () =>{
             
         });
         const data = await res.json();
-        console.log(data);
-
+     
         if(res.status===400 || !data){
             window.alert("No email");
         }
