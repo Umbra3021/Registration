@@ -7,7 +7,10 @@ const Login = () =>{
 
     const log = async (e) => {
         e.preventDefault();
-        const res = await fetch('https://backend-nine-silk.vercel.app/login',{
+        if(!email || !pass){
+            window.alert("Fill details");
+        }
+        const res = await fetch("https://backend-nine-silk.vercel.app/login",{
             method:"POST",
             credentials:"include",
             headers:{
