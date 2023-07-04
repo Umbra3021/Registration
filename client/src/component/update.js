@@ -18,7 +18,7 @@ const Update = () =>{
         e.preventDefault();
 
         const {name,email,password,password2} =user;
-        const res = await fetch("https://backend-nine-silk.vercel.app/reset",{
+        const res = await fetch("https://backend-nine-silk.vercel.app/update",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

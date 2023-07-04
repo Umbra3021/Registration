@@ -7,7 +7,7 @@ const Reset = () =>{
 
     const log = async (e) => {
         e.preventDefault();
-        const res = await fetch("https://backend-nine-silk.vercel.app/emailsend",{
+        const res = await fetch("https://backend-nine-silk.vercel.app/reset",{
             method:"POST",
             credentials:"include",
             headers:{

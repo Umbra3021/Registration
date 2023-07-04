@@ -44,7 +44,7 @@ router.post('/register', async (req,res) =>{
 });
 
 
-router.post('/login' , async(req,res) => {
+router.post('/signin' , async(req,res) => {
 
     try{
     const {email,password} = req.body;
@@ -64,7 +64,7 @@ catch(err){
 })
 
 
-router.post('/emailsend',async (req,res) => {
+router.post('/reset',async (req,res) => {
     try{    
             // let otpcode;
            emailsend=req.body.email
@@ -105,7 +105,7 @@ router.post('/emailsend',async (req,res) => {
 });
 
 
-router.post('/reset',async (req,res) =>{
+router.post('/update',async (req,res) =>{
     try{
         let  {email,code,password} =req.body;
         let data =await otp.find({email:email,code:code});

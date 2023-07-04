@@ -10,7 +10,7 @@ const Login = () =>{
         if(!email || !pass){
             window.alert("Fill details");
         }
-        const res = await fetch("https://backend-nine-silk.vercel.app/login",{
+        const res = await fetch("https://backend-nine-silk.vercel.app/signin",{
             method:"POST",
             credentials:"include",
             headers:{
