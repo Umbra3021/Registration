@@ -12,7 +12,6 @@ const Login = () =>{
         }
         const res = await fetch("https://backend-nine-silk.vercel.app/signin",{
             method:"POST",
-            credentials:"include",
             headers:{
                 "Content-Type":"application/json"
             },

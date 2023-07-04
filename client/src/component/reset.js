@@ -9,7 +9,6 @@ const Reset = () =>{
         e.preventDefault();
         const res = await fetch("https://backend-nine-silk.vercel.app/reset",{
             method:"POST",
-            credentials:"include",
             headers:{
                 "Content-Type":"application/json"
             },
