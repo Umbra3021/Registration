@@ -27,6 +27,10 @@ const Register = () =>{
         e.preventDefault();
 
         const {name,email,password,password2} =user;
+        if(!name ||!email || !password || !password2){
+            window.alert("Fill the form");
+            return;
+        }
         const res = await fetch("https://backend-nine-silk.vercel.app/register",{
             method:"POST",
             headers:{
