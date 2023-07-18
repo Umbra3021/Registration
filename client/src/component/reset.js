@@ -20,8 +20,10 @@ const Reset = () =>{
                 email:email,
             })
         });
-
-        const data =  await res.json();
+        let data = 0  
+        if(data===0){
+         data =  await res.json();
+        }
         // console.log(data);
         if(res.status===400 || !data){
             window.alert("No email");
