@@ -13,15 +13,7 @@ const User = require('../model/TestSchema');
 
 
 let otpcode;
-const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
-    auth: {
-        user: 'ignacio79@ethereal.email',
-        pass: 'RMSBRMnkhkVa5MT7BD'
-    }
-  });
+
 
 
 
@@ -78,19 +70,12 @@ router.post('/reset',async (req,res) => {
                 });
 
 
-                let info = {
-                    from: '"Abhishek 👻" <foo@example.com>', // sender address
-                    to: emailsend, // list of receivers
-                    subject: "OTP Verification", // Subject line
-                    html: `<b>Your OTP is  `+otpcode+ `</b>`, // html body
-                  };
-                  res.send(otpdata.code);
-                  await transporter.sendMail(info);
+                 
                 let otpres= await otpdata.save();
 
-                
-                  res.send(otpdata.code);
-                  console.log("Message sent: %s", info.messageId);
+                res.send(JSON.stringify(otpcode));
+
+                  
                   return res.status(200).json({message:"Email found"});
               
                 }

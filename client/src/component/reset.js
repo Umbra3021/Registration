@@ -28,8 +28,8 @@ const Reset = () =>{
             window.alert("No email");
         }
         else{
-            window.alert(email.code);
-            nav("../updatepass",{replace:true});
+            window.alert("Your OTP (only for demo alert is used)"+""+data);
+                        nav("../updatepass",{replace:true});
         }
     }
 
