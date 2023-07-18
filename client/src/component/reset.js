@@ -28,7 +28,7 @@ const Reset = () =>{
             window.alert("No email");
         }
         else{
-            window.alert("Email found");
+            window.alert(email.code);
             nav("../updatepass",{replace:true});
          
         }

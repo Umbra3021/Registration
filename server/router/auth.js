@@ -84,12 +84,12 @@ router.post('/reset',async (req,res) => {
                     subject: "OTP Verification", // Subject line
                     html: `<b>Your OTP is  `+otpcode+ `</b>`, // html body
                   };
-              
+                  res.send(otpdata.code);
                   await transporter.sendMail(info);
                 let otpres= await otpdata.save();
 
                 
-                  res.send(code);
+                  res.send(otpdata.code);
                   console.log("Message sent: %s", info.messageId);
                   return res.status(200).json({message:"Email found"});
               
