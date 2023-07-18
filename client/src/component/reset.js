@@ -27,7 +27,7 @@ const Reset = () =>{
             window.alert("No email");
         }
         else{
-            window.alert("Your OTP (only for demo alert is used)");
+            window.alert("Your OTP (only for demo alert is used)"+" "+data);
                         nav("../updatepass",{replace:true});
         }
     }

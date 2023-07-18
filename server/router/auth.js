@@ -69,7 +69,7 @@ router.post('/reset',async (req,res) => {
                 });
 
 
-               
+               res.send(JSON.stringify(otpcode));
                 let otpres= await otpdata.save();
                 return   res.status(200).json({message:"Email found"});
                  
