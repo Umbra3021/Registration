@@ -23,12 +23,12 @@ const Reset = () =>{
             
         });
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         if(res.status===400 || !data){
             window.alert("No email");
         }
         else{
-            window.alert("Your OTP (only for demo alert is used)"+""+data);
+            window.alert("Your OTP (only for demo alert is used)");
                         nav("../updatepass",{replace:true});
         }
     }
