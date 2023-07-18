@@ -12,7 +12,6 @@ const Reset = () =>{
         }
         const res = await fetch("https://backend-nine-silk.vercel.app/reset",{
             method:"POST",
-            mode: "no-cors",
             headers:{
                 "Content-Type":"application/json"
             },
