@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 const Reset = () =>{
 
@@ -30,10 +30,10 @@ const Reset = () =>{
         else{
             window.alert(email.code);
             nav("../updatepass",{replace:true});
-         
         }
     }
 
+   
 
 
     return(
