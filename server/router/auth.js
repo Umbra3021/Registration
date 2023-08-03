@@ -58,7 +58,8 @@ catch(err){
 router.post('/reset',async (req,res) => {
     try{    
             // let otpcode;
-           emailsend=req.body.email
+           emailsend=req.body.email;
+            console.log(emailsend);
            let data = await User.findOne({email:emailsend});
            if(data){
                  otpcode = Math.floor((Math.random()*10000)+1);
